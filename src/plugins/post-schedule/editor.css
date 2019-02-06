@@ -1,0 +1,47 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+/**
+	Just hide the main post-schedule
+ */
+.edit-post-post-schedule {
+	/*display: none;*/
+}
+
+/*
+	Fonts
+ */
+@font-face {
+	font-family: "Vazir";
+	src: url(./fonts/Vazir-FD-WOL.eot);
+	src: url(./fonts/Vazir-FD-WOL.eot#iefix)
+	format("embedded-opentype"),
+	url(./fonts/Vazir-FD-WOL.woff2) format("woff2"),
+	url(./fonts/Vazir-FD-WOL.woff) format("woff"),
+	url(./fonts/Vazir-FD-WOL.ttf) format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Sidebar panel item style */
+.gutenberg-jalali-calendar-edit-post-post-schedule {
+	width: 100%;
+	position: relative;
+}
+
+.gutenberg-jalali-calendar-edit-post-post-schedule__label {
+	display: none;
+}
+
+.components-button.gutenberg-jalali-calendar-edit-post-post-schedule__toggle {
+	text-align: right;
+}
+
+.gutenberg-jalali-calendar-edit-post-post-schedule__dialog .components-popover__content {
+	padding: 10px;
+}
+
