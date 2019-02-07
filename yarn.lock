@@ -4240,6 +4240,11 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+persianjs@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/persianjs/-/persianjs-0.4.0.tgz#52c53a111926f8426763ac937c5063756a7e74f2"
+  integrity sha512-mRxvgI3sqPJf+/h1fZuj86uCg0nHR3aVsFsx+Nror+ZeUFTIbgDjVa9zjDJETMUwrgSwo8D1l8FdLzYEayKH1A==
+
 pify@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"

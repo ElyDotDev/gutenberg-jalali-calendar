@@ -20,15 +20,15 @@
  * @since 0.0.1
  */
 
-const alias = require('./alias');
-const paths = require('./paths');
-const externals = require('./externals');
-const autoprefixer = require('autoprefixer');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const alias = require( './alias' );
+const paths = require( './paths' );
+const externals = require( './externals' );
+const autoprefixer = require( 'autoprefixer' );
+const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 
-const GJCCSSPlugin = new ExtractTextPlugin({
+const GJCCSSPlugin = new ExtractTextPlugin( {
 	filename: './dist/gutenberg-jalali-calendar.build.css',
-});
+} );
 
 module.exports = {
 	entry: {
@@ -55,40 +55,41 @@ module.exports = {
 			{
 				test: /\.css$/,
 				exclude: /(bower_components)/,
-				use: GJCCSSPlugin.extract({
-							fallback: 'style-loader',
-							use: [
-								'css-loader', {
-									loader: 'postcss-loader',
-									options: {
-										ident: 'postcss',
-										plugins: [
-											autoprefixer({
-												browsers: [
-													'>1%',
-													'last 4 versions',
-													'Firefox ESR',
-													'not ie < 9',
-												],
-												flexbox: 'no-2009',
-											}),
+				use: GJCCSSPlugin.extract( {
+					fallback: 'style-loader',
+					use: [
+						'css-loader', {
+							loader: 'postcss-loader',
+							options: {
+								ident: 'postcss',
+								plugins: [
+									autoprefixer( {
+										browsers: [
+											'>1%',
+											'last 4 versions',
+											'Firefox ESR',
+											'not ie < 9',
 										],
-									},
-								}],
-						},
+										flexbox: 'no-2009',
+									} ),
+								],
+							},
+						} ],
+				},
 				),
 			},
 			{
 				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
 				loader: 'file-loader',
 				options: {
+					name: '[name].[ext]',
 					outputPath: 'dist/assets/fonts',
 					publicPath: './assets/fonts',
 				},
-			}
+			},
 		],
 	},
-	plugins: [GJCCSSPlugin],
+	plugins: [ GJCCSSPlugin ],
 	stats: 'minimal',
 	externals: externals,
 	resolve: {

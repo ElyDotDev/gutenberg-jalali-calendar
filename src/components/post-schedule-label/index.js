@@ -9,14 +9,17 @@ import {dateI18n, __experimentalGetSettings} from '@wordpress/date';
 import {withSelect} from '@wordpress/data';
 import moment from 'moment-jalaali';
 
-const jalaliDateFormat = 'jD jMMMM, jYYYY HH:mm:ss';
+import persinaJs from 'persianjs';
+
+const jalaliDateFormat = 'jD jMMMM, jYYYY hh:mm a';
 
 export function GJCPostScheduleLabel({date, isFloating, dateFormat}) {
 	const settings = __experimentalGetSettings();
 
-	moment.loadPersian({usePersianDigits: true, dialect: 'persian-modern'});
+	moment.loadPersian({dialect: 'persian-modern'});
+
 	return date && !isFloating ?
-			moment(date, dateFormat).format(jalaliDateFormat) :
+			persinaJs(moment(date, dateFormat).format(jalaliDateFormat)).englishNumber().toString() :
 			__('Immediately');
 }
 

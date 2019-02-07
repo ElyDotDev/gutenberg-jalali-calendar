@@ -88,11 +88,11 @@ module.exports = {
 					outputPath: 'dist/assets/fonts',
 					publicPath: './assets/fonts',
 				},
-			}
+			},
 		],
 	},
 	plugins: [
-			GJCCSSPlugin,
+		GJCCSSPlugin,
 		new webpack.optimize.UglifyJsPlugin({
 			compress: {
 				warnings: false,
@@ -106,7 +106,7 @@ module.exports = {
 				ascii_only: true,
 			},
 			sourceMap: false,
-		})
+		}),
 	],
 	stats: 'minimal',
 	externals: externals,

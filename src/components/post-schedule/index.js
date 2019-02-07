@@ -33,8 +33,8 @@ function GutenbergJalaliCalendarPostSchedule({instanceId}) {
 							renderToggle={ ({onToggle, isOpen}) => (
 									<Fragment>
 										<label
-												className="edit-post-post-schedule__label"
-												htmlFor={ `edit-post-post-schedule__toggle-${ instanceId }` }
+												className="gutenberg-jalali-calendar-edit-post-post-schedule__label"
+												htmlFor={ `gutenberg-jalali-calendar-edit-post-post-schedule__toggle-${ instanceId }` }
 										>
 											<GJCPostScheduleLabel dateFormat={ dateFormat }/> { __(
 												'Click to change') }

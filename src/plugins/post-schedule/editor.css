@@ -9,7 +9,7 @@
 	Just hide the main post-schedule
  */
 .edit-post-post-schedule {
-	display: none;
+	/*display: none !important;*/
 }
 
 /*
@@ -39,6 +39,8 @@
 
 .components-button.gutenberg-jalali-calendar-edit-post-post-schedule__toggle {
 	text-align: right;
+	direction: rtl;
+	display: inline-block;
 }
 
 .gutenberg-jalali-calendar-edit-post-post-schedule__dialog .components-popover__content {
